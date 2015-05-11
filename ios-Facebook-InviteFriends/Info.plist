@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>FacebookDisplayName</key>
-	<string>Photo Kitty</string>
+	<string></string>
 	<key>FacebookAppID</key>
-	<string>693896027363994</string>
+	<string></string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb693896027363994</string>
+				<string></string>
 			</array>
 			<key>CFBundleURLName</key>
 			<string></string>

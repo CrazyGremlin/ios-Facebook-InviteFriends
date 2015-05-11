@@ -11,18 +11,23 @@ import FBSDKCoreKit
 import FBSDKShareKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController, FBLoginViewDelegate, FBSDKGameRequestDialogDelegate {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate, FBSDKGameRequestDialogDelegate  {
+    
+    var loginButton: FBSDKLoginButton?
     
     override func viewDidLoad() {
         println("called viewDidLoad")
         super.viewDidLoad()
-
-        let fbLoginView = FBLoginView(frame: CGRectMake(0, 0, 300, 100))
-        fbLoginView.backgroundColor = UIColor.redColor()
-        fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
-        fbLoginView.delegate = self
         
-        view.addSubview(fbLoginView)
+        loginButton = FBSDKLoginButton(frame: CGRectMake(0, 400, 300, 100))
+        loginButton!.readPermissions = ["public_profile", "email", "user_friends"]
+        loginButton!.delegate = self
+        view.addSubview(loginButton!)
+        
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            println("Token: \(token)")
+            inviteFriends()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,44 +35,30 @@ class ViewController: UIViewController, FBLoginViewDelegate, FBSDKGameRequestDia
         // Dispose of any resources that can be recreated.
     }
     
-    // FBLoginViewDelegate protocols
-    func loginView(loginView: FBLoginView!, handleError error: NSError!) {
-        println("called loginView")
+    // FBSDKLoginButtonDelegate protocols
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        println("called loginButton")
+        
+        println(result)
+        println(result.token)
+        println(result.grantedPermissions)
+        println(result.declinedPermissions)
+        
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            println("Token: \(token)")
+            inviteFriends()
+        }
     }
     
-    func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
-        println("called loginViewFetchedUserInfo")
-        
-        println(user)
-        println(user.objectForKey("id"))
-        
-        let text = UILabel(frame: CGRectMake(0, 100, 300, 20))
-        let name = user.objectForKey("name") as! String
-        text.text = "Welcome \(name)"
-        
-        view.addSubview(text)
-        
-        let button = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        button.frame = CGRectMake(0, 130, 100, 50)
-        button.backgroundColor = UIColor.greenColor()
-        button.setTitle("Invite friends", forState: UIControlState.Normal)
-        button.addTarget(self, action: "inviteFriends:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        view.addSubview(button)
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        println("called loginButtonDidLogOut")
     }
     
-    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
-        println("called loginViewShowingLoggedInUser")
-    }
-    
-    func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
-        println("called loginViewShowingLoggedOutUser")
-    }
-    
-    
-    func inviteFriends(sender: AnyObject) {
-        FBRequestConnection.startWithGraphPath("/me/invitable_friends", completionHandler: {(connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
-            println("Result \(result)")
+    func inviteFriends() {
+        
+        FBSDKGraphRequest(graphPath: "/me/invitable_friends", parameters: nil).startWithCompletionHandler { (connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+            println("called completition")
+            println(result)
             
             var data : NSArray = result.objectForKey("data") as! NSArray
             
@@ -76,9 +67,6 @@ class ViewController: UIViewController, FBLoginViewDelegate, FBSDKGameRequestDia
                 let valueDict : NSDictionary = data[i] as! NSDictionary
                 let id = valueDict.objectForKey("id") as! String
                 to.append(id)
-                
-                // Only the first for testing...
-                break
             }
             
             let content = FBSDKGameRequestContent()
@@ -93,9 +81,7 @@ class ViewController: UIViewController, FBLoginViewDelegate, FBSDKGameRequestDia
             dialog.delegate = self
             
             dialog.show()
-            
-        } as FBRequestHandler)
-        
+        }
     }
     
     // FBSDKGameRequestDialogDelegate protocols
@@ -110,8 +96,6 @@ class ViewController: UIViewController, FBLoginViewDelegate, FBSDKGameRequestDia
     func gameRequestDialogDidCancel(gameRequestDialog: FBSDKGameRequestDialog!) {
         println("called gameRequestDialogDidCancel")
     }
-    
-    
     
 }
 

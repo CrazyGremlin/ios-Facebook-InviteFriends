@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86A224781B00AD9200FE7FB6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A224751B00AD9200FE7FB6 /* FBSDKCoreKit.framework */; };
+		86A224791B00AD9200FE7FB6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A224761B00AD9200FE7FB6 /* FBSDKLoginKit.framework */; };
+		86A2247A1B00AD9200FE7FB6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A224771B00AD9200FE7FB6 /* FBSDKShareKit.framework */; };
+		86A2247D1B00AF3C00FE7FB6 /* README.MD in Sources */ = {isa = PBXBuildFile; fileRef = 86A2247C1B00AF3C00FE7FB6 /* README.MD */; };
 		86DF62A21AFA8F4A00ECB96C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF62A11AFA8F4A00ECB96C /* AppDelegate.swift */; };
 		86DF62A41AFA8F4A00ECB96C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF62A31AFA8F4A00ECB96C /* ViewController.swift */; };
 		86DF62A71AFA8F4A00ECB96C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86DF62A51AFA8F4A00ECB96C /* Main.storyboard */; };
 		86DF62A91AFA8F4A00ECB96C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DF62A81AFA8F4A00ECB96C /* Images.xcassets */; };
 		86DF62AC1AFA8F4A00ECB96C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DF62AA1AFA8F4A00ECB96C /* LaunchScreen.xib */; };
 		86DF62B81AFA8F4A00ECB96C /* ios_Facebook_InviteFriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF62B71AFA8F4A00ECB96C /* ios_Facebook_InviteFriendsTests.swift */; };
-		86DF62C51AFA8F5E00ECB96C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86DF62C11AFA8F5E00ECB96C /* FacebookSDK.framework */; };
-		86DF62C61AFA8F5E00ECB96C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86DF62C21AFA8F5E00ECB96C /* FBSDKCoreKit.framework */; };
-		86DF62C71AFA8F5E00ECB96C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86DF62C31AFA8F5E00ECB96C /* FBSDKLoginKit.framework */; };
-		86DF62C81AFA8F5E00ECB96C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86DF62C41AFA8F5E00ECB96C /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86A224751B00AD9200FE7FB6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		86A224761B00AD9200FE7FB6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		86A224771B00AD9200FE7FB6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		86A2247C1B00AF3C00FE7FB6 /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		86DF629C1AFA8F4A00ECB96C /* ios-Facebook-InviteFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-Facebook-InviteFriends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DF62A01AFA8F4A00ECB96C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86DF62A11AFA8F4A00ECB96C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,11 +44,6 @@
 		86DF62B11AFA8F4A00ECB96C /* ios-Facebook-InviteFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-Facebook-InviteFriendsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DF62B61AFA8F4A00ECB96C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86DF62B71AFA8F4A00ECB96C /* ios_Facebook_InviteFriendsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_Facebook_InviteFriendsTests.swift; sourceTree = "<group>"; };
-		86DF62C11AFA8F5E00ECB96C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		86DF62C21AFA8F5E00ECB96C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		86DF62C31AFA8F5E00ECB96C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		86DF62C41AFA8F5E00ECB96C /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		86DF62C91AFA8F7700ECB96C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DF62C81AFA8F5E00ECB96C /* FBSDKShareKit.framework in Frameworks */,
-				86DF62C51AFA8F5E00ECB96C /* FacebookSDK.framework in Frameworks */,
-				86DF62C61AFA8F5E00ECB96C /* FBSDKCoreKit.framework in Frameworks */,
-				86DF62C71AFA8F5E00ECB96C /* FBSDKLoginKit.framework in Frameworks */,
+				86A224791B00AD9200FE7FB6 /* FBSDKLoginKit.framework in Frameworks */,
+				86A224781B00AD9200FE7FB6 /* FBSDKCoreKit.framework in Frameworks */,
+				86A2247A1B00AD9200FE7FB6 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +67,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86A2247B1B00AD9800FE7FB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86A224751B00AD9200FE7FB6 /* FBSDKCoreKit.framework */,
+				86A224761B00AD9200FE7FB6 /* FBSDKLoginKit.framework */,
+				86A224771B00AD9200FE7FB6 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86DF62931AFA8F4A00ECB96C = {
 			isa = PBXGroup;
 			children = (
+				86A2247C1B00AF3C00FE7FB6 /* README.MD */,
 				86DF629E1AFA8F4A00ECB96C /* ios-Facebook-InviteFriends */,
 				86DF62B41AFA8F4A00ECB96C /* ios-Facebook-InviteFriendsTests */,
 				86DF629D1AFA8F4A00ECB96C /* Products */,
@@ -90,10 +99,7 @@
 		86DF629E1AFA8F4A00ECB96C /* ios-Facebook-InviteFriends */ = {
 			isa = PBXGroup;
 			children = (
-				86DF62C11AFA8F5E00ECB96C /* FacebookSDK.framework */,
-				86DF62C21AFA8F5E00ECB96C /* FBSDKCoreKit.framework */,
-				86DF62C31AFA8F5E00ECB96C /* FBSDKLoginKit.framework */,
-				86DF62C41AFA8F5E00ECB96C /* FBSDKShareKit.framework */,
+				86A2247B1B00AD9800FE7FB6 /* Frameworks */,
 				86DF62A11AFA8F4A00ECB96C /* AppDelegate.swift */,
 				86DF62A31AFA8F4A00ECB96C /* ViewController.swift */,
 				86DF62A51AFA8F4A00ECB96C /* Main.storyboard */,
@@ -108,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				86DF62A01AFA8F4A00ECB96C /* Info.plist */,
-				86DF62C91AFA8F7700ECB96C /* Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A2247D1B00AF3C00FE7FB6 /* README.MD in Sources */,
 				86DF62A41AFA8F4A00ECB96C /* ViewController.swift in Sources */,
 				86DF62A21AFA8F4A00ECB96C /* AppDelegate.swift in Sources */,
 			);
@@ -367,7 +373,7 @@
 				INFOPLIST_FILE = "ios-Facebook-InviteFriends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ios-Facebook-InviteFriends/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -382,7 +388,7 @@
 				INFOPLIST_FILE = "ios-Facebook-InviteFriends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ios-Facebook-InviteFriends/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -439,6 +445,7 @@
 				86DF62BD1AFA8F4A00ECB96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86DF62BE1AFA8F4A00ECB96C /* Build configuration list for PBXNativeTarget "ios-Facebook-InviteFriendsTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +454,7 @@
 				86DF62C01AFA8F4A00ECB96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
