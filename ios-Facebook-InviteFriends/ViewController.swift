@@ -16,7 +16,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, FBSDKGameReque
     var loginButton: FBSDKLoginButton?
     
     override func viewDidLoad() {
-        println("called viewDidLoad")
+        print("called viewDidLoad")
         super.viewDidLoad()
         
         loginButton = FBSDKLoginButton(frame: CGRectMake(0, 400, 300, 100))
@@ -25,7 +25,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, FBSDKGameReque
         view.addSubview(loginButton!)
         
         if let token = FBSDKAccessToken.currentAccessToken() {
-            println("Token: \(token)")
+            print("Token: \(token)")
             inviteFriends()
         }
     }
@@ -37,28 +37,28 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, FBSDKGameReque
     
     // FBSDKLoginButtonDelegate protocols
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        println("called loginButton")
+        print("called loginButton")
         
-        println(result)
-        println(result.token)
-        println(result.grantedPermissions)
-        println(result.declinedPermissions)
+        print(result)
+        print(result.token)
+        print(result.grantedPermissions)
+        print(result.declinedPermissions)
         
         if let token = FBSDKAccessToken.currentAccessToken() {
-            println("Token: \(token)")
+            print("Token: \(token)")
             inviteFriends()
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        println("called loginButtonDidLogOut")
+        print("called loginButtonDidLogOut")
     }
     
     func inviteFriends() {
         
         FBSDKGraphRequest(graphPath: "/me/invitable_friends", parameters: nil).startWithCompletionHandler { (connection: FBSDKGraphRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
-            println("called completition")
-            println(result)
+            print("called completition")
+            print(result)
             
             var data : NSArray = result.objectForKey("data") as! NSArray
             
@@ -86,15 +86,15 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate, FBSDKGameReque
     
     // FBSDKGameRequestDialogDelegate protocols
     func gameRequestDialog(gameRequestDialog: FBSDKGameRequestDialog!, didCompleteWithResults results: [NSObject : AnyObject]!) {
-        println("called gameRequestDialog")
+        print("called gameRequestDialog")
     }
     
     func gameRequestDialog(gameRequestDialog: FBSDKGameRequestDialog!, didFailWithError error: NSError!) {
-        println("called gameRequestDialog")
+        print("called gameRequestDialog")
     }
     
     func gameRequestDialogDidCancel(gameRequestDialog: FBSDKGameRequestDialog!) {
-        println("called gameRequestDialogDidCancel")
+        print("called gameRequestDialogDidCancel")
     }
     
 }
